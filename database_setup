@@ -1,0 +1,52 @@
+
+CREATE TABLE events(
+	id INT NOT NULL AUTO_INCREMENT,
+	host VARCHAR(255),
+	description VARCHAR(255),
+	date DATETIME,
+	cost VARCHAR(255),
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE attendees(
+	id INT NOT NULL AUTO_INCREMENT,
+	__fk_eventid int, 
+	__fk_userid int,
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE users(
+	id INT NOT NULL AUTO_INCREMENT,
+	google_id VARCHAR(255),
+	name VARCHAR(255),
+	email VARCHAR(255),
+	role VARCHAR(255),
+	PRIMARY KEY (id)
+);
+
+
+CREATE TABLE qrcodes(
+	id INT NOT NULL AUTO_INCREMENT,
+	timestamp DATETIME,
+	__fk_userid int,
+	uri VARCHAR(255),
+	PRIMARY KEY (id)
+);
+
+
+#
+# connect to the database with PHP
+#
+
+$servername = "localhost";
+$username = "root";
+$password = "MakeANewGreatOccurance";
+$dbname = "mango";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+

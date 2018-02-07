@@ -1,0 +1,6 @@
+AuthType Basic
+AuthName "Mango area"
+AuthUserFile /var/www/html/auth/.htpasswd
+require valid-user
+RewriteEngine on
+RewriteRule ^([^/.]+)/?$ index.php?code=$1 [L]

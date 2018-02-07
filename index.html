@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="M.A.N.G.O. Events Website">
+	<meta name="author" content="">
+	<title>Make A New Great Occurrence</title>
+	<link rel='shortcut icon' href='https://cdn.iconscout.com/public/images/icon/free/png-256/mango-fruit-vitamin-healthy-summer-food-3bf2382f17dd7b94-256x256.png' type='image/x-icon'/ >
+
+	<!-- Google Identity Information -->
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="js/google-identity.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	<!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="css/1-col-portfolio.css" rel="stylesheet">
+	<link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+	<style>
+		html, body {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		div.main {
+			background: url("/images/bg.jpg") top center no-repeat;
+			background-size: cover;
+			background-size: cover;
+			height: 100vh;
+			min-height: 500px;
+			padding: 0px;
+			overflow-y: auto;
+		}
+
+		h1 {
+			font-family: 'Roboto', sans-serif;
+			font-size: 72px;
+		}
+
+		@media screen and (max-width: 768px) {
+			.greeting h1 {
+				font-size: 40px;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Page Content -->
+	<div class="container-fluid main">
+		<nav class="navbar navbar-light bg-none">
+			<a class="navbar-brand" href="http://makeanewgreatoccurance.com" style="color: white;">
+				<img src="https://cdn.iconscout.com/public/images/icon/free/png-256/mango-fruit-vitamin-healthy-summer-food-3bf2382f17dd7b94-256x256.png" width="30" height="30" class="d-inline-block align-top" alt="">
+				Make A New Great Occurance (mango)
+			</a>
+		</nav>
+		<div class="container-fluid text-center greeting" >
+			<h1 style="color:white; margin-top:175px;">Welcome, Future Entrepreneur!</h1>
+			<p class="lead" style="color:white; ">This site can help get you started with creating events, we will show you da wae.</p>
+			<button type="button" class="btn btn-secondary" data-url="/signin">Create Event</button> <button type="button" class="btn btn-secondary" data-url="/events">View Events</button>
+		</div>
+	</div>
+	<!-- /.container -->
+
+	<!-- Footer -->
+	<footer class="py-5 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">Copyright &copy; Make A New Great Occurrence (mango) 2018</p>
+		</div>
+		<!-- /.container -->
+	</footer>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script>
+		$("button").click(function() {
+			switch ($(this).attr("data-url")) {
+			case "/events":
+				window.location.href = "/events";
+				break;
+			case "/signin":
+				var newWindow = window.open("/signin", 'name', 'height=600,width=450');
+				break;
+			default:
+				break;
+			}
+		})
+	</script>
+</body>
+</html>
